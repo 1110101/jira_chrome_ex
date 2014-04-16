@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "JIRA Toolkit",
+  "description": "This extension provides text templates that can be pasted to the comment field on a task.",
+  "version": "1",
+  "content_scripts": [
+    {
+      "matches": ["https://sapjira.wdf.sap.corp/browse/*"],
+      "js": ["myscript.js"]
+    }
+  ],
+  "permissions": [
+    "https://sapjira.wdf.sap.corp/"
+  ],
+  "web_accessible_resources": [
+	"script.js"
+  ],
+  "content_security_policy": "default-src 'unsafe-eval'"
+  
+}
